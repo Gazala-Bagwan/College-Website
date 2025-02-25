@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-10">
+    <footer id="footer" className="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-10">
       <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8 text-sm">
         {/* Left Section */}
         <div>
@@ -26,9 +26,9 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="mt-2 space-y-1">
-     <li><Link to="/services" className="hover:underline transition duration-300">Services</Link></li>
-    <li><Link to="/about-us" className="hover:underline transition duration-300">About Us</Link></li>
-    <li><Link to="/achievements" className="hover:underline transition duration-300">Achievements</Link></li>
+     <li><Link to="/" className="hover:underline transition duration-300">HomePage</Link></li>
+    <li><Link to="/about" className="hover:underline transition duration-300">About Us</Link></li>
+    <li><Link to="/Department" className="hover:underline transition duration-300">Department</Link></li>
     <li><Link to="/contact-us" className="hover:underline transition duration-300">Contact Us</Link></li>
    </ul>
         </div>

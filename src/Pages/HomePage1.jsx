@@ -14,6 +14,7 @@ import card1 from '../image/card1.png';
 import card2 from '../image/card2.png';
 import card3 from '../image/card3.png';
 import card4 from '../image/card4.png';
+import "../App.css";
 
 const IndividualIntervalsExample = () => {
   return (
@@ -97,7 +98,7 @@ const HomePage = () => {
     <div>
       <IndividualIntervalsExample />
       <hr className="section-divider" />
-      <section className="who-we-are">
+      <section id="who-we-are" className="who-we-are">
         <div className="text">
           <h1>Who We Are?</h1>
           <p>
@@ -111,7 +112,7 @@ const HomePage = () => {
         </div>
         <img src={slide1} alt="College" />
       </section>
-      <section className="features-section">
+      <section id="features" className="features-section">
         <div className="title-div">
           <h3>The Spirit Of SGM</h3>
           <p>Achieve Your Dreams</p>

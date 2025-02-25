@@ -6,8 +6,7 @@ body {
   color: #000957; /* Dark blue for text */
   font-family: "Roboto", serif;
 }
-
-/* NAVBAR STYLES */
+/* Main Navbar */
 .main-navbar-div {
   width: 100%;
   background-color: #050553;
@@ -54,16 +53,82 @@ body {
 .main-navbar-div .nav-list li {
   display: inline-block;
   padding: 10px;
+  position: relative;
 }
 
 .main-navbar-div .nav-list a {
-  color: black;
+  color: rgb(7, 7, 7);
   text-decoration: none;
   font-weight: bold;
 }
 .main-navbar-div .nav-list a:hover {
   color: #050553;
 }
+
+/* Mega Menu Styles */
+.mega-menu {
+  position: absolute;
+  margin-top: 10px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 900px;
+  max-width: none;
+  background-color: #040110;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.mega-menu-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.menu-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #efe8ed;
+  margin-bottom: 10px;
+}
+
+.menu-section ul {
+  display: flex;
+  flex-direction: column; /* Forces links to stack */
+  gap: 3px; /* Adds spacing between links */
+  list-style: none;
+  padding: 0;
+}
+
+.menu-section ul li {
+  padding: 8px 0;
+  
+}
+
+.menu-section ul li a {
+  color: white !important;
+  text-decoration: none;
+  font-size: 16px; 
+  transition: 0.3s;
+}
+
+.menu-section ul li a:hover {
+  color: #4da6ff;
+}
+
 .carousel-caption {
   bottom: 30%;
   text-align: center;
@@ -72,16 +137,21 @@ body {
 }
 
 .slider-content {
-  background-color: #000957; 
+  background-color: rgba(14, 14, 14, 0.7); 
   padding: 1.5rem 2rem;
   border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 9, 87, 0.5); 
-  border: 2px solid #344CB7; 
+  box-shadow: 0px 5px 15px rgba(33, 33, 35, 0.5); 
+  border: 2px solid #17181c; 
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+.slider-content:hover {
+  background-color: rgba(14, 14, 14, 0.5); /* More transparent on hover */
+  opacity: 0.8; /* Reduce opacity further on hover */
 }
 
 .slider-title h3 {
   font-size: 2rem;
-  color: #FFC600;
+  color: #FFFFFF;
   font-family: "Cinzel Decorative", serif;
   font-style: italic;
   font-weight: bold;
@@ -89,7 +159,7 @@ body {
 
 .welcome-msg {
   font-size: 1.2rem;
-  color: #A6C8FF;
+  color: #f6f7f9;
   font-family: "Robot", serif;
 
 }
@@ -111,7 +181,7 @@ body {
 }
 
 .slider-btn:hover {
-  background-color: #0056b3;
+  background-color: #fcfdff;
 }
 
 
@@ -406,7 +476,7 @@ footer .social-icons a:hover {
 footer .footer-bottom {
   text-align: center;
   margin-top: 1rem;
-  border-top: 1px solid gray;
+  border-top: 1px solid rgb(217, 212, 227);
   padding-top: 1rem;
   font-size: 0.875rem;
   opacity: 0.8;
@@ -725,4 +795,155 @@ footer .footer-bottom {
 .alumni-card-text {
   font-size: 14px;
   color: #333;
+}
+
+.department-section {
+  background: rgb(148, 191, 220);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgb(238, 236, 236);
+  margin-bottom: 50px; /* Adds gap between department cards and footer */
+}
+
+.department-card {
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(244, 243, 243, 0.944);
+}
+
+.department-card:hover {
+  transform: scale(1.05);
+}
+.department-card .btn {
+  background-color: #007bff; /* Change to your desired color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.department-card .btn:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+/* General Styling */
+.department-container {
+  padding: 40px 0;
+}
+
+.hero-section {
+  background-color: #064380;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto 40px; /* Centers the section */
+  max-width: 1000px; /* Adjust width as needed */
+}
+
+
+/* Department Cards */
+.department-card {
+  border: 2px solid #ebeeec;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.department-card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 15px #ecf2f8;
+}
+
+.department-card img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.department-card .card-body {
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+/* Courses Section */
+.courses-section {
+  margin-top: 60px;
+  padding: 30px; /* Add padding inside the section */
+  background-color: #74aecbfc; /* Light background for contrast */
+  border: 3px solid #f6f9fc; /* Add a blue border around the section */
+  border-radius: 10px; /* Round the corners */
+  box-shadow: 5px 5px 15px rgba(0, 123, 255, 0.2); /* Soft shadow for depth */
+  max-width: 90%; /* Limit width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Course Card */
+.course-card {
+  border: 3px solid #f0f1f3;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 15px;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 20px rgba(106, 107, 145, 0.3);
+}
+
+.course-card img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid #f7fbff;
+}
+
+/* Center Content Inside Section */
+.courses-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #02070d;
+  font-style: bold;
+  font-size: 32px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+/* Styling for all h2 elements */
+/* Ensure all h2 elements are centered */
+h2 {
+  text-align: center;
+  width: 100%;
+  font-family: Robot;
+  
+}
+
+/* Fix alignment inside specific containers */
+.department-section h2 {
+  display: block; /* Ensure it behaves like a block element */
+  margin: 0 auto 20px auto;
+  
+}
+
+
+.courses-section h2 {
+  background-color: #f8f9fa; /* Light background */
+  padding: 10px;
+  border-radius: 5px;
 }

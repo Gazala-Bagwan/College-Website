@@ -6,6 +6,10 @@ import Footer from "./components1/Footer";
 import HomePage from "./Pages/HomePage1.jsx"; // Fixing case sensitivity
 import AboutUs from "./Pages/AboutUs.jsx";  // Fixing the incorrect file name
 import Department from "./Pages/Department.jsx";
+import Graduate from "./Pages/Graduate.jsx";
+import Postgraduate from "./Pages/Postgraduate.jsx";
+import Addon from "./Pages/Addon.jsx";
+
 
 function App() {
   return (
@@ -13,9 +17,12 @@ function App() {
       <MainNavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutUs />} />
         <Route path="/department" element={<Department />} />
-      </Routes>
+        <Route path="/graduate" element={<Graduate />} />
+        <Route path="/postgraduate"element={<Postgraduate />} />
+        <Route path="/addon"element={<Addon />} />
+        <Route path="/about" element={<AboutUs />} />
+       </Routes>
       <Footer />
     </Router>
   );
